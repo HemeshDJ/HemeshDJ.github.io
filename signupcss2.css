@@ -1,0 +1,150 @@
+body
+{
+  margin: 0;
+  align-items: center;
+  align-content: center;
+  background-color: #3333cc;
+}
+
+h1
+{
+  text-align: center;
+  font-family: Trebuchet MS;
+  background-color: #6666ff;
+  padding: 40px;
+  width: 40%;
+  margin: 50px auto;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+
+fieldset
+{
+  /*vertical-align: middle;*/
+  font-family: Trebuchet MS;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  /*border-color:  #6666ff;*/
+  border: 0;
+  background-color:  #6666ff;
+}
+
+label
+{
+  margin-top: 100px;
+}
+
+input
+{
+  height: 30px;
+  width: 45%;
+  border-radius: 11px;
+  border-color: #6666ff;
+  border: 0;
+}
+
+button
+{
+  height: 30px;
+  margin-top: 15px;
+  font-size: 20px;
+  width: 20%;
+  border-radius: 7px;
+  border: 0;
+  background-color: #2222bb;
+  color: white;
+  font-family: Trebuchet MS;
+}
+
+button:hover
+{
+  color: black;
+}
+
+p
+{
+  padding-top: 10px;
+}
+
+a
+{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* for nav part */
+
+ul
+{
+  margin: 12.5px 0;
+  /*margin-top: 12.5px;*/
+  padding-left: 0;
+}
+
+.pages a
+{
+  color: #3CB0FF;
+}
+
+a:hover
+{
+  color: white;
+}
+
+.pages li
+{
+  /*padding: 25px;*/
+  vertical-align: center;
+  font-family: Trebuchet MS;
+  display: inline;
+  font-size: 30px;
+  padding: 12.5px 25px;
+}
+
+.pages li:hover
+{
+  background-color: blue;
+}
+
+.pages li:first-of-type
+{
+  margin-left: 75px;
+}
+
+h3
+{
+  color: #4A0404;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+  text-decoration: none;
+  margin: 0;
+}
+
+h4
+{
+  color: #7CFC00;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+  text-decoration: none;
+  margin: 0;
+}
+
+p
+{
+  margin: 0;
+}
+
+.redirect p
+{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
