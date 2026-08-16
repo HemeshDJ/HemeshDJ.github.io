@@ -1,83 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Hosted Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HemeshDJ — Hosted projects</title>
     <meta
       name="description"
-      content="HemeshDJ's hosted projects page featuring Infinite Wordle and a California DMV practice test."
+      content="Projects hosted by HemeshDJ, including Infinite Wordle and a California DMV practice test."
     >
-    <link rel="stylesheet" type="text/css" href="homecss.css" />
+    <link rel="stylesheet" href="homecss.css">
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="index.html">HemeshDJ</a>
-        <p class="header-note">Hosted experiments and playable builds</p>
       </header>
 
       <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Currently Live</p>
-            <h1>A compact home for the projects I am actively hosting.</h1>
-            <p class="intro">
-              This page tracks the work that is already public, including Infinite Wordle
-              and a California DMV practice test, with more projects to be added over time.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-action" href="/Infinite-Wordle">Play Infinite Wordle</a>
-              <a class="secondary-action" href="/DMV-Test">DMV practice test</a>
-            </div>
-          </div>
-
-          <aside class="hero-panel" aria-label="Hosting summary">
-            <p class="panel-label">Live count</p>
-            <p class="panel-value">02</p>
-            <p class="panel-copy">Two active projects are available right now.</p>
-          </aside>
+        <section class="intro-block">
+          <h1>Hosted projects</h1>
+          <p>Small public builds. Infinite Wordle stays up; the DMV practice test is the newest addition.</p>
         </section>
 
-        <section class="projects-section" id="projects" aria-label="Hosted projects">
-          <div class="section-heading">
-            <p class="section-kicker">Project Index</p>
-            <h2>Hosted projects</h2>
-          </div>
+        <section class="project-grid" aria-label="Hosted projects">
+          <a class="project-card" href="/Infinite-Wordle">
+            <p class="project-type">Game</p>
+            <h2>Infinite Wordle</h2>
+            <p class="project-description">A Wordle-style puzzle you can replay any time, without waiting for the next daily word.</p>
+            <span class="project-cta">Open</span>
+          </a>
 
-          <article class="project-card">
-            <div class="project-topline">
-              <p class="project-number">01</p>
-              <p class="status">Live</p>
-            </div>
-            <h3>Infinite Wordle</h3>
-            <p class="project-description">
-              A replayable Wordle-inspired game you can jump into any time without
-              waiting for the next daily puzzle.
-            </p>
-            <div class="project-meta">
-              <p>Type: Browser game</p>
-              <p>Route: <code>/Infinite-Wordle</code></p>
-            </div>
-            <a class="project-link" href="/Infinite-Wordle">Open project</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <p class="project-number">02</p>
-              <p class="status">Live</p>
-            </div>
-            <h3>California DMV Practice Test</h3>
-            <p class="project-description">
-              A Class C knowledge-test trainer based on the California Driver Handbook,
-              with adult, under-18, and quick practice modes.
-            </p>
-            <div class="project-meta">
-              <p>Type: Study tool</p>
-              <p>Route: <code>/DMV-Test</code></p>
-            </div>
-            <a class="project-link" href="/DMV-Test">Open project</a>
-          </article>
+          <a class="project-card" href="/DMV-Test">
+            <p class="project-type">Study tool</p>
+            <h2>California DMV practice test</h2>
+            <p class="project-description">Class C knowledge questions from the California Driver Handbook, with adult, under-18, and quick modes.</p>
+            <span class="project-cta">Open</span>
+          </a>
         </section>
       </main>
     </div>

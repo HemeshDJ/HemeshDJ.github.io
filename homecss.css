@@ -1,359 +1,142 @@
-:root
-{
-  --bg: #08111f;
-  --bg-glow: #12395f;
-  --surface: rgba(8, 17, 31, 0.74);
-  --surface-strong: rgba(255, 255, 255, 0.08);
-  --border: rgba(148, 163, 184, 0.22);
-  --text: #f8fafc;
-  --muted: #cbd5e1;
-  --soft: #94a3b8;
+:root {
+  --bg: #0b1220;
+  --text: #f4f7fb;
+  --muted: #9aa8bc;
+  --line: rgba(255, 255, 255, 0.1);
+  --card: rgba(255, 255, 255, 0.04);
+  --card-hover: rgba(255, 255, 255, 0.07);
   --accent: #f97316;
-  --accent-soft: #fed7aa;
 }
 
-*
-{
+* {
   box-sizing: border-box;
 }
 
-html
-{
+html {
   scroll-behavior: smooth;
 }
 
-body
-{
+body {
   margin: 0;
   min-height: 100vh;
-  font-family: Georgia, "Times New Roman", serif;
   color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(59, 130, 246, 0.20), transparent 26%),
-    linear-gradient(180deg, var(--bg-glow), var(--bg));
+    radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.14), transparent 32%),
+    radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.16), transparent 28%),
+    var(--bg);
 }
 
-a
-{
+a {
   color: inherit;
   text-decoration: none;
 }
 
-code
-{
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-.page-shell
-{
-  width: min(1120px, calc(100% - 32px));
+.page-shell {
+  width: min(920px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 28px 0 72px;
+  padding: 36px 0 80px;
 }
 
-.site-header
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 0 28px;
+.site-header {
+  padding-bottom: 48px;
 }
 
-.brand
-{
-  font-size: 1.05rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.header-note
-{
-  margin: 0;
-  color: var(--soft);
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-main
-{
-  display: grid;
-  gap: 36px;
-}
-
-.hero
-{
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.8fr);
-  gap: 24px;
-  align-items: stretch;
-}
-
-.hero-copy
-{
-  padding: 34px;
-  border: 1px solid var(--border);
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(8, 17, 31, 0.4));
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-}
-
-.eyebrow
-{
-  margin: 0 0 12px;
-  color: var(--accent);
+.brand {
   font-size: 0.82rem;
-  letter-spacing: 0.22em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-h1
-{
-  margin: 0;
-  max-width: 10ch;
-  font-size: clamp(3rem, 8vw, 5.8rem);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-}
-
-.intro
-{
-  max-width: 58ch;
-  margin: 22px 0 0;
   color: var(--muted);
-  font-size: 1.1rem;
+}
+
+.intro-block h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.intro-block p {
+  max-width: 46ch;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
   line-height: 1.6;
-  font-family: "Trebuchet MS", sans-serif;
 }
 
-.hero-actions
-{
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.project-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.primary-action,
-.secondary-action,
-.project-link
-{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-family: "Trebuchet MS", sans-serif;
-  font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-}
-
-.primary-action
-{
-  color: #111827;
-  background: var(--accent);
-}
-
-.secondary-action
-{
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.primary-action:hover,
-.secondary-action:hover,
-.project-link:hover
-{
+.project-card:hover {
+  background: var(--card-hover);
+  border-color: rgba(249, 115, 22, 0.45);
   transform: translateY(-2px);
 }
 
-.hero-panel
-{
-  padding: 28px;
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  background:
-    linear-gradient(180deg, rgba(249, 115, 22, 0.12), rgba(255, 255, 255, 0.03)),
-    var(--surface);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
-}
-
-.panel-label,
-.panel-copy,
-.section-kicker,
-.project-number,
-.project-meta p
-{
+.project-type {
   margin: 0;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-.panel-label
-{
-  color: var(--soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
 }
 
-.panel-value
-{
-  margin: 12px 0 8px;
-  font-size: clamp(3rem, 10vw, 5rem);
-  line-height: 0.9;
-}
-
-.panel-copy
-{
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.projects-section
-{
-  display: grid;
-  gap: 18px;
-}
-
-.projects-section .project-card
-{
-  width: 100%;
-}
-
-.section-heading
-{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.section-kicker
-{
-  color: var(--accent-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
-}
-
-h2
-{
-  margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-}
-
-.project-card
-{
-  padding: 30px;
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(8, 17, 31, 0.5)),
-    var(--surface);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
-}
-
-.project-topline
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.project-number
-{
-  color: var(--soft);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-h3
-{
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.project-description
-{
-  max-width: 58ch;
+.project-card h2 {
   margin: 14px 0 0;
+  font-size: 1.45rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.project-description {
+  margin: 12px 0 0;
   color: var(--muted);
-  line-height: 1.7;
-  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
-.project-meta
-{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 22px;
-  color: var(--soft);
+.project-cta {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 650;
 }
 
-.status
-{
-  margin: 0;
-  padding: 8px 14px;
-  border-radius: 999px;
-  color: #111827;
-  background: #fcd34d;
-  font-weight: bold;
-  font-family: "Trebuchet MS", sans-serif;
+.project-cta::after {
+  content: " →";
 }
 
-.project-link
-{
-  margin-top: 28px;
-  color: #111827;
-  background: #f8fafc;
-}
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 28px, 920px);
+    padding-top: 24px;
+  }
 
-@media (max-width: 800px)
-{
-  .hero
-  {
+  .site-header {
+    padding-bottom: 32px;
+  }
+
+  .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  h1
-  {
-    max-width: none;
-  }
-}
-
-@media (max-width: 640px)
-{
-  .page-shell
-  {
-    width: min(100% - 24px, 1120px);
-    padding-top: 20px;
-  }
-
-  .site-header,
-  .project-topline
-  {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-copy,
-  .hero-panel,
-  .project-card
-  {
-    padding: 24px;
-  }
-
-  .project-meta
-  {
-    flex-direction: column;
-    gap: 8px;
   }
 }
