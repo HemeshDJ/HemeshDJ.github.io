@@ -220,6 +220,11 @@ h1
   gap: 18px;
 }
 
+.projects-section .project-card
+{
+  width: 100%;
+}
+
 .section-heading
 {
   display: flex;
