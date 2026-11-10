@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://hemeshdj.github.io/MyChessBase/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hemeshdj.github.io/Infinite-Wordle/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
